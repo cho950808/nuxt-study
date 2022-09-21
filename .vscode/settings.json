@@ -7,4 +7,9 @@
   //   "editor.formatOnSave": true,
   //   "editor.defaultFormatter": "esbenp.prettier-vscode"
   // }
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "vue": "html"
+  }
 }

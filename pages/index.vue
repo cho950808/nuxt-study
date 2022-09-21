@@ -1,38 +1,33 @@
 <template>
-  <main>
-    <h1>Task Board</h1>
-    <p>Create a list of tasks</p>
-
-    <div class="create-new">
-      <input
-        type="text"
-        v-model="newTask"
-        placeholder="Add a new task"
-        @keypress.enter="addTask"
-      />
-      <button @click="addTask">Add</button>
-    </div>
-
-    <div class="tasks">
-      <Task v-for="(task, i) in $store.state.tasks" :key="i" :task="task" />
-    </div>
-  </main>
+  <div>
+    <Main />
+  </div>
 </template>
 
 <script>
+import Main from "./main.vue";
+
 export default {
-  data() {
-    return {
-      newTask: "",
-    };
-  },
-  methods: {
-    addTask() {
-      if (this.newTask) {
-        this.$store.commit("ADD_TASK", this.newTask);
-        this.newTask = "";
-      }
-    },
+  name: "App",
+  components: {
+    Main,
   },
 };
 </script>
+
+<style>
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
+</style>

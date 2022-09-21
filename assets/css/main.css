@@ -1,4 +1,4 @@
-* {
+/* * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -115,4 +115,4 @@ main .tasks .task button.delete {
 
 .tasks .task.is-complete .content {
 	text-decoration: line-through;
-}
+} */
