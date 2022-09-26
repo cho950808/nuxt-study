@@ -1,9 +1,7 @@
 const router = require("express").Router();
+const dao = require("./dao");
 
-router.get("/", (req, res) => {
-  //화면에 good 노출
-  res.send("good");
-});
+router.get("/", dao.list); // GET방식으로 접근 시 dao.list 모듈 실행
 
 router.all("*", (req, res) => {
   res
